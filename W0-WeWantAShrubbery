@@ -1,16 +1,25 @@
 Mini-project description — “We want... a shrubbery!”
 
-This mini-project is optional. Specifically, your grade on this mini-project will not count towards your final grade in this class. While this mini-project may appear silly, its purpose is important: learning how to submit and peer assess your Python mini-projects via Coursera. This mini-project is your chance to run through this process and learn how to avoid some of the simple mistakes that have plagued students in previous sessions of this class. We will walk you through each step of the process so that, next week when it is time for Rock-Paper-Scissors-Lizard-Spock, you will understand the process completely.
+This mini-project is optional. Specifically, your grade on this mini-project will not count towards your final grade in this class. 
+While this mini-project may appear silly, its purpose is important: learning how to submit and peer assess your Python mini-projects 
+via Coursera. This mini-project is your chance to run through this process and learn how to avoid some of the simple mistakes that 
+have plagued students in previous sessions of this class. We will walk you through each step of the process so that, next week when 
+it is time for Rock-Paper-Scissors-Lizard-Spock, you will understand the process completely.
 
 Mini-project development process
 Your task is simple: modify this program template to print
 
 We want... a shrubbery!
 
-in the CodeSkulptor console. Your program should consist of a single line of Python. Before submitting your program, we suggest that you review the grading rubric given below.
+in the CodeSkulptor console. Your program should consist of a single line of Python. Before submitting your program, we suggest that 
+you review the grading rubric given below.
+
 Grading rubric — 4 pts total
 
-Your peers will assess your mini-project according to the following rubric. Small deviations from the textual output described above, like an extra period (.) or space are fine. Whether moderate deviations, such as just printing shrubbery, satisfy an item of the grading rubric is at your peers' discretion during their assessment. You should avoid large deviations such as printing a different Monty Python quote. Here is a breakdown of the scoring:
+Your peers will assess your mini-project according to the following rubric. Small deviations from the textual output described above, 
+like an extra period (.) or space are fine. Whether moderate deviations, such as just printing shrubbery, satisfy an item of the 
+grading rubric is at your peers' discretion during their assessment. You should avoid large deviations such as printing a different 
+Monty Python quote. Here is a breakdown of the scoring:
 
     1 pt — A valid CodeSkulptor URL was submitted. No credit if the code is just pasted into the text box.
     1 pt — Running the program does not throw an error.
