@@ -123,11 +123,11 @@ Here is a break down of the scoring:
     3 pts — Program chooses correct winner according to RPSLS rules. Please manually examine 5 cases for correctness. If all five 
             cases are correct, award 3 pts; four cases correct award 2 pts; one to three cases correct award 1 pt; no cases correct 
             award 0 pts.
-
-
-
-
-From: http://www.codeskulptor.org/#user41_koifqLxkYy_5.py
+ 
+ 
+ 
+ 
+http://www.codeskulptor.org/#user41_koifqLxkYy_5.py
 # Rock-paper-scissors-lizard-Spock template
 # created n January 23, 2016
 
