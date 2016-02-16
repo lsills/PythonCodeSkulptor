@@ -69,3 +69,100 @@ Grading Rubric - 13 pts total (scaled to 100 pts)
     2 pts - The "Stop" button correctly updates these success/attempts numbers. Give only one point if hitting the "Stop" button 
       changes these numbers when the timer is already stopped.
     1 pt - The "Reset" button clears the success/attempts numbers.
+
+ 
+ 
+http://www.codeskulptor.org/#user41_gcj9bcIGER_3.py
+# template for "Stopwatch: The Game"
+#created on February 6, 2016
+
+import simplegui
+import math
+
+# define global variables
+interval = 100 # In milliseconds (1000 ms = 1 s)
+
+counter = 0
+time = 0
+Total_stops = 0 #total tries
+Stops_on_zero = 0 #stops on exactly 0
+
+runningtime = True
+
+message1 = "Test your Reflexes"
+message2 = "Try to stop the watch on a whole number every 5 seconds!"
+message3 = "Accuracy is in the top right corner"
+
+# define helper function format that converts time
+# in tenths of seconds into formatted string A:BC.D
+def format(t):
+    A = t // 600   		  #minutes
+    B = (t // 100) % 6    #tens of seconds
+    C = (t / 10) % 10     #seconds
+    D = t % 10            #tenths of seconds
+  
+    return str(A) + ':' + str(B) + str(C) + '.' + str(D)
+    
+# define event handlers for buttons; "Start", "Stop", "Reset"
+def start():
+    global counter, runningtime
+    runningtime = False
+    timer.start()
+
+def stop():
+    global Total_stops, Stops_on_zero, runningtime    
+    if not runningtime:
+        Total_stops += 1
+        if counter % 10 == 0:
+            Stops_on_zero += 1
+            sound.play()
+    runningtime = True        
+    timer.stop()
+    
+def reset():
+    global counter, Total_stops, Stops_on_zero
+    runningtime = True
+    counter = 0
+    Total_stops = 0
+    Stops_on_zero = 0
+    timer.stop()
+
+# define event handler for timer with 0.1 sec interval
+def tick():
+    global counter
+    counter += 1
+
+# define draw handler
+
+def draw_handler(canvas):
+    text = format(counter)
+    canvas.draw_text(text, (75, 100), 25, 'White')
+    canvas.draw_text(str(Stops_on_zero) + "/" + str(Total_stops), (150, 25), 20, 'Black')
+
+sound = simplegui.load_sound('http://www.soundjig.com/pages/soundfx/beeps.php?mp3=beep1.mp3')
+sound.set_volume(0.7)  #sound from http://www.soundjig.com/pages/soundfx/beeps.html
+
+# create frame
+frame = simplegui.create_frame("Stopwatch: The Game", 200, 200)
+frame.set_canvas_background('Blue')
+
+frame.add_button("Start", start, 100)
+frame.add_button("Stop", stop, 100)
+frame.add_label("")
+frame.add_button("Reset", reset, 100)
+
+frame.set_draw_handler(draw_handler)
+
+# register event handlers
+
+timer = simplegui.create_timer(interval, tick)
+timer.start() 
+
+print message1
+print message2
+print message3
+
+# start frame
+frame.start()
+reset()
+# Please remember to review the grading rubric
